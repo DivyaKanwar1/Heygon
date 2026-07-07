@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragon IRIS - Executive Interview Intelligence</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            max-width: 900px;
+            padding: 40px;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            display: block;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        h1 {
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #4A90D9, #6C2BD9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .tagline {
+            font-size: 22px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+        .sub-tagline {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+            text-align: left;
+        }
+        .feature {
+            background: #1a1a1a;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid #2a2a2a;
+            transition: all 0.3s ease;
+        }
+        .feature:hover {
+            border-color: #4A90D9;
+            transform: translateY(-2px);
+        }
+        .feature .icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .feature h3 {
+            color: #4A90D9;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        .feature p {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .status {
+            display: inline-block;
+            padding: 12px 36px;
+            background: #2ECC71;
+            color: #000;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .status-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #2ECC71;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+        .sub {
+            color: #555;
+            margin-top: 30px;
+            font-size: 13px;
+        }
+        .endpoints {
+            margin-top: 30px;
+            background: #111;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #222;
+            text-align: left;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #aaa;
+        }
+        .endpoints span {
+            color: #4A90D9;
+        }
+        .endpoints .method {
+            color: #2ECC71;
+        }
+        @media (max-width: 600px) {
+            .features { grid-template-columns: 1fr; }
+            h1 { font-size: 32px; }
+            .logo { width: 80px; height: 80px; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/logo.jpg" alt="Paragon IRIS" class="logo">
+        <h1>PARAGON IRIS</h1>
+        <div class="tagline">The standard for executive hiring</div>
+        <div class="sub-tagline">77 signals. One truth. See what others miss.</div>
+        
+        <div class="features">
+            <div class="feature">
+                <span class="icon">👁️</span>
+                <h3>77 Signals</h3>
+                <p>Comprehensive analysis of posture, speech, micro-expressions, and environment</p>
+            </div>
+            <div class="feature">
+                <span class="icon">⚡</span>
+                <h3>Real-time</h3>
+                <p>Live scoring during interviews with instant WebSocket feedback</p>
+            </div>
+            <div class="feature">
+                <span class="icon">🎯</span>
+                <h3>Executive Focus</h3>
+                <p>Designed specifically for VP, Director, and C-suite hiring decisions</p>
+            </div>
+        </div>
+        
+        <div>
+            <span class="status">
+                <span class="status-dot"></span>
+                Service Operational
+            </span>
+        </div>
+        
+        <div class="endpoints">
+            <div><span class="method">GET</span>  <span>/api/health</span>  → Service health check</div>
+            <div><span class="method">POST</span> <span>/api/analyze</span> → Upload video for analysis</div>
+            <div><span class="method">WS</span>   <span>/ws</span>          → Real-time WebSocket streaming</div>
+            <div><span class="method">GET</span>  <span>/api/report/{id}</span> → Download PDF report</div>
+        </div>
+        
+        <div class="sub">
+            Paragon IRIS v1.0.0 &bull; 77 features &bull; 85% accuracy &bull; Privacy-first local processing
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paragon IRIS Overlay</title>
+  <link rel="stylesheet" href="overlay.css">
+</head>
+<body>
+  <div id="overlay-container">
+    <div class="header">
+      <div class="logo-area">
+        <span class="logo-icon">👁️</span>
+        <span class="logo-text">PARAGON IRIS</span>
+      </div>
+      <div class="status-area">
+        <span class="status-dot" id="status-dot"></span>
+        <button class="close-btn" id="close-btn">✕</button>
+      </div>
+    </div>
+    
+    <div class="grid-2">
+      <div class="metric-card">
+        <div class="metric-label">Eye Contact</div>
+        <div class="metric-value" id="eye-contact" style="color: #4A90D9;">0%</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Posture</div>
+        <div class="metric-value" id="posture" style="color: #6C2BD9;">0%</div>
+      </div>
+    </div>
+    
+    <div class="overall-card">
+      <div class="overall-label">Overall Presence</div>
+      <div class="overall-value" id="overall">0</div>
+    </div>
+    
+    <div class="footer">
+      <span class="footer-text" id="timestamp">--:--:--</span>
+      <span class="live-badge"><span class="live-dot"></span>Live</span>
+    </div>
+  </div>
+  
+  <script src="overlay.js"></script>
+</body>
+</html>

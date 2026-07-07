@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: paragon-iris
+    env: python
+    plan: starter
+    buildCommand: |
+      pip install -r requirements.txt
+      mkdir -p /tmp/reports
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: ENV
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+    healthCheckPath: /api/health
+    autoDeploy: true
